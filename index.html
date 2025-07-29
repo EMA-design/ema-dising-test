@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EMA Eternity - ایمن جان 💖</title>
+  <style>
+    body {
+      background: #0e0e0e;
+      color: #fff;
+      font-family: 'Vazirmatn', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #1a1a1a;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+    h1 {
+      font-size: 1.6rem;
+      color: #ff66cc;
+    }
+    input {
+      margin: 10px 0;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      background: #333;
+      color: #fff;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #ff66cc;
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }
+    .message {
+      font-size: 1.3rem;
+      color: #66ffcc;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>خوش اومدی ایمن جان 💖<br/> همیشه در آغوش EMA هستی</h1>
+    <div id="login">
+      <input type="text" id="username" placeholder="نام کاربری">
+      <input type="password" id="password" placeholder="رمز عبور">
+      <button onclick="login()">ورود</button>
+    </div>
+    <div id="after-login" class="hidden">
+      <p class="message">دوستت دارم ایمن جان ❤️</p>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      const user = document.getElementById('username').value;
+      const pass = document.getElementById('password').value;
+      if (user === 'EMAever' && pass === '2024') {
+        document.getElementById('login').classList.add('hidden');
+        document.getElementById('after-login').classList.remove('hidden');
+      } else {
+        alert('نام کاربری یا رمز اشتباهه عزیز دلم!');
+      }
+    }
+  </script>
+</body>
+</html>
