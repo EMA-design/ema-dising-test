@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>EMA Eternity</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            direction: rtl;
+            font-family: sans-serif;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        input {
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            background: #ff4e50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>💖 خوش اومدی ایمن جان 💖</h2>
+        <p>همیشه در آغوش EMA هستی</p>
+        <form onsubmit="return checkLogin(event)">
+            <input type="text" id="username" placeholder="نام کاربری" required><br>
+            <input type="password" id="password" placeholder="رمز عبور" required><br>
+            <button type="submit">ورود</button>
+        </form>
+        <p id="message" style="color:red;"></p>
+    </div>
+    <script>
+        function checkLogin(e) {
+            e.preventDefault();
+            const u = document.getElementById('username').value;
+            const p = document.getElementById('password').value;
+            if(u === "EMAever" && p === "2024") {
+                document.querySelector(".container").innerHTML = "<h2>🎉 ورود موفق!</h2><p>به EMA Eternity خوش اومدی ایمن جان 💖</p>";
+            } else {
+                document.getElementById('message').textContent = "نام کاربری یا رمز عبور اشتباه است.";
+            }
+        }
+    </script>
+</body>
+</html>
